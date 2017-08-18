@@ -1,36 +1,18 @@
-# renoscoin-docker
+# dogecoin-rpc
 1.Build:
 
   A. locally:
   
     $ git clone https://github.com/onitsoft/renoscoin-docker.git
+    $ mkdir dogecoin-rpc/dogecoin_data
+    $ cp dogecoin-rpc/dogecoin.conf dogecoin-rpc/dogecoin_data
     $ docker build -t renoscoin-docker renoscoin-docker/
    
     
   B. Get from docker hub:
   
-    $ docker pull onitsoft/renoscoin-docker:latest
+    $ docker pull onit/dogecoin-rpc:latest
     
-
-2. create shared volume
-```
-$ mkdir renoscoin_data
-```
-3. coppy the renoscoing config file into the share volume
-``` 
-$ cp renoscoin-docker/renoscoin.conf renoscoin_data/
-```
-
-wget from GitHub raw version if you used docker hub if you used docker-hub (`docker pull`)
-
-```
-$ cd renoscoin_data && wget https://raw.githubusercontent.com/onitsoft/renoscoin-docker/master/renoscoin.conf
-```
-
-4. Run
-```
-$ docker run -d -p -p 65223:65223 -v {$PWD}/renoscoin_data:/root/renoscoin/data renoscoin-docker /bin/bash -c "/root/renoscoin/app/start.sh"
-```
 
 ## License
 

@@ -3,10 +3,10 @@
 
   A. locally:
   
-    $ git clone https://github.com/onitsoft/renoscoin-docker.git
-    $ mkdir dogecoin-rpc/dogecoin_data
-    $ cp dogecoin-rpc/dogecoin.conf dogecoin-rpc/dogecoin_data
-    $ docker build -t renoscoin-docker renoscoin-docker/
+    $ git clone https://github.com/onitsoft/dogecoin-rpc.git
+    $ mkdir dogecoin-rpc/wallet_data
+    $ cp dogecoin-rpc/dogecoin.conf dogecoin-rpc/wallet_data
+    $ docker build -t dogecoin-rpc dogecoin-rpc/
    
     
   B. Get from docker hub:

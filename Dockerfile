@@ -14,14 +14,14 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 WORKDIR /root
 
-RUN mkdir dogecoin && \
-    mkdir dogecoin/data
+RUN mkdir wallet && \
+    mkdir wallet/data
 
-ADD app/ dogecoin/app/
-ADD start.sh dogecoin/app/start.sh
-RUN chmod -R 700 dogecoin/app/*
-ADD dogecoin_data/dogecoin.conf dogecoin/data/dogecoin.conf
+ADD app/ wallet/app/
+ADD start.sh wallet/app/start.sh
+RUN chmod -R 700 wallet/app/*
+ADD wallet_data/dogecoin.conf wallet/data/dogecoin.conf
 
-WORKDIR /root/dogecoin/app
+WORKDIR /root/wallet/app
 
 CMD ["/bin/bash"]

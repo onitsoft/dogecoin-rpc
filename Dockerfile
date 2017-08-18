@@ -20,7 +20,7 @@ RUN mkdir wallet && \
 ADD app/ wallet/app/
 ADD start.sh wallet/app/start.sh
 RUN chmod -R 700 wallet/app/*
-ADD wallet_data/dogecoin.conf wallet/data/dogecoin.conf
+ADD dogecoin.conf wallet/data/dogecoin.conf
 
 WORKDIR /root/wallet/app
 

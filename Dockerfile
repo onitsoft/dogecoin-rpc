@@ -6,5 +6,6 @@ ADD app/ $COIN_BASE/app/
 RUN chmod -R +x $COIN_BASE/app/*
 RUN chown -R coin:coin $COIN_BASE
 USER coin
+ENTRYPOINT ["/home/coin/app/start.sh"]
 CMD ["/bin/bash"]
 
